@@ -1,0 +1,36 @@
+<!-- 
+A confirmation dialog box is mostly used to take user's permission
+on any option. it display a dialog box with tow buttons:OK and Cancel
+
+If the user clicks on the OK button, the window method confirm()
+will return true. if the user clicks on the Cancel button, then,
+confirm() returns false.
+
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<script type="text/javascript">
+	function myFun(){
+		var userConfirm = confirm("Do you want to visit website?");
+		if(userConfirm == true){
+			window.open("www.google.com");
+			return true;
+		}else{
+			document.write("User dosen't want to visit web.");
+			return false;
+		}
+	}
+	
+</script>
+<div>
+	<input type="button" name="" value="Click Me" onclick="myFun()">
+</div>
+
+</body>
+</html>

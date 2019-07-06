@@ -1,0 +1,96 @@
+<script type="text/javascript">
+	//An array is a special variable, which can hold more than one value at a time
+	
+	// the Array object let's you store multiple values ina single variable
+	/*
+	Note: Array index always starts from 0
+	You can create array using key word: new
+
+	Array Property
+
+	The length property sets or returns the number of elements in an array
+
+	Arrays methods:
+		1) sort() - sorts the items of an array
+		   The sort order can be either alphabetic or numeric, and either ascending ( up ) or descending ( down )
+		2) pop() - method remove the last element of an array, and returns the elements
+		3) push() - methods add new items to the end of an array, and return the new length.
+		4) shift() - method remove the first item of an array.
+		5) unshift() - method adds new items to the beginning of an array, and return the new length.
+
+		6) reverse() - method reverse the order of the elements in an array.
+		7) isArray() - methods determines whether an object is an Array.
+		8) concat() - methods to join two or more arrays.
+		9) indexOf() - method searches the array for the specified item, and return it's position on array.
+
+
+
+
+
+	*/
+	var names = ['Devendra','Thapa','Magar'];
+
+	var naams = new Array('Kamala','Rangu','Magar');
+	
+	// document.write("<br>");
+
+	document.write(naams);
+
+	document.write("<br>");
+	
+	// Array.isArray(names) // to check Array or not
+	names.sort(); // sort the array ascending 
+
+	names.push("Tarami","Rangu"); // adding two items on the array
+
+	document.write(names);
+	document.write("<br>");
+
+	names.pop(); //remove the last item
+	document.write(names);
+	document.write("<br>");
+
+	
+	names.unshift("Kamala");
+	names.unshift("TEST1");
+	//kamala and TEST1 will be added at the front of the array
+	document.write(names + "<br>");
+
+	names.shift(); // remove the first item of an array
+	document.write(names + "<br>");
+
+	/*
+	Reverse the Array from back to front
+	*/
+	names.reverse();
+	document.write(names + "<br>");
+
+	var arr = new Array();
+	arr.push("TEST1");
+	arr.push("TEST2");
+	arr.push("TEST3");
+	arr.push("TEST4");
+	document.write(arr + "<br>");
+
+	var arr2 = arr.concat(names);
+
+	var arr3 = arr2;
+	arr3.sort();
+	document.write( " VALUE OF ARR3 => " + arr3 + ", arr3 is an Array: " + Array.isArray(arr3) + "<br>");
+
+	document.write(arr2 + "<br>");
+	// document.write("<br>");
+
+	//indexOf();
+	// var pos = arr3.indexOf("TEST1");
+	// var pos = pos + 1;
+	// document.write(pos);
+
+	for(var i=0;i<arr3.length;i++){
+		document.write("Index at " + i +" value is : " + arr3[i]);
+		document.write("<br>");
+	}
+
+
+
+</script>

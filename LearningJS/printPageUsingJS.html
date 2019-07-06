@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Print</title>
+	</head>
+	<body>
+		
+		
+		<div id="divone">
+			<p>Div one Content is here!</p>
+			<button onclick="divPrintFunction('divone')">Print Div 1</button>
+		</div>
+		<div id="divtwo">
+			<p>Div two Content is here!</p>
+			<button onclick="divPrintFunction('divtwo')  ">Print Div 2</button>
+		</div>
+		<div id="divthree">
+			<p>Div three Content is here!</p>
+			<button onclick="divPrintFunction('divthree')">Print Div 3</button>
+		</div>
+		<br>
+		<br>
+		<button onclick="printWholePage()">Print Whole Page!</button>
+		<script type="text/javascript">
+			function printWholePage(){
+				window.print();
+			}
+			function divPrintFunction(paravalue){
+				//let's store whole body child on the backup
+				var backup = document.body.innerHTML;
+				//divContent will get the value from the id and content
+				//and store to divContent.
+				var divContent = document.getElementById(paravalue).innerHTML
+				//Now, we assign content div body to the document.
+				//it will only asign the divContent inside from given div
+				document.body.innerHTML = divContent;
+				//once it assigned it assume, only given divContent is whole page and print it.
+				window.print();
+				//we now need to assign whole child to the body. so all content available from all div and tags.h
+				document.body,innerHTML = backup;
+			}
+		</script>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- <style type="text/css" media="screen">
+			body{
+				background-color: red;
+				text-align: center;
+			}
+		</style> -->
+	</body>
+</html>

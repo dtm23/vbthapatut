@@ -1,0 +1,64 @@
+<!-- Strict mode is a different parsing and execution model for JavaScript, where some of the erratic behavior is addressed.
+
+To enable strict mode for an entire script, include the following at the top:
+
+"use strict"; 
+This is a pragma that tells supporting JavaScript engines to change into strict mode.
+
+You may specify a function to execute in strict mode by including the pragma at the top of the function body:
+
+function doSomething(){ 
+    "use strict"; 
+    //function body 
+}  -->
+
+<script type="text/javascript">
+var num = 0;
+
+for (var i = 1; i < 10; i++) {
+    if (i % 5 == 0) {
+        break; //
+    }
+    num++;
+}
+// document.write(num);
+
+function doSomething() {
+    "use Strict";
+}
+
+// doSomething();
+</script>
+<div>
+    <h2>Get Local Time!</h2>
+    <input type="button" value="Click to get Local Time" name="" onclick="getLocalTime()">
+    <script type="text/javascript">
+    function getLocalTime() {
+        document.getElementById('time').innerHTML = Date();
+    }
+
+    function getName(){
+    	var naam = document.getElementById('name').innerHTML;
+    	document.write("Given name is : " + naam);
+    }
+
+
+
+    </script>
+
+
+    <p id="time"></p>
+    <p id="name">Devendra</p>
+    <p id="address">59 Basingstoke</p>
+
+    <script type="text/javascript" charset="utf-8" async defer>
+    	
+    getName();
+    </script>
+
+
+
+
+
+</div>
+

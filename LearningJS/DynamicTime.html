@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Dynamic Time
+	</title>
+</head>
+<body>
+	<div>
+		<h2>Dynamic Clock in JavaScript</h2>
+		<!-- 
+
+			The setInterval() method call a function or evaluate an express 
+			at specified interval() method will continue calling the function
+			until clearInterval() is called, or the window is closed.
+			The ID value return by setInterval() is used as the parameter for the clearInterval() method.
+
+			The clearInterval() method stop the executions of the function specified in the setInterval() method.
+
+		 -->
+
+
+	</div>
+
+	<input type="button" name="" value="Click to Pause!" onclick="clearInterval(clock)">
+	
+	<p id="showTime"></p>
+	<script type="text/javascript">
+
+		var clock = setInterval(clocktiming, 1000);
+
+		function clocktiming(){
+			var date = new Date();
+			var d = date.toLocaleTimeString();
+			document.getElementById('showTime').innerHTML = d;
+		}
+		
+
+		
+	</script>
+
+</body>
+</html>

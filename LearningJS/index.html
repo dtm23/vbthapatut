@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Learing JS
+    </title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    document.write("<h1>Devendra Thapa Magar</h1>");
+    </script>
+    <h2>Variable & Identifier in JavaScript</h2>
+    <div>
+        <h3> Variable </h3>
+        <p>
+            <script type="text/javascript">
+            //variable
+            var a = 1;
+            var b = 2;
+            var c = "Dvndra";
+
+            document.write("Value of A: " + a + "</br>");
+            document.write("Value of B: " + b + "</br>");
+            document.write("Value of C: " + c + "</br>");
+            var d = a + b;
+            document.write("A + B = " + d + "</br>");
+
+            var f;
+
+            document.write("Value of F:" + f + "</br>");
+
+            var g = null;
+            console.log(g);
+            console.log(f);
+
+            var bool = false;
+            var boolean = true;
+
+            document.write("value of bool: " + bool + "</br>");
+            document.write("value of bool: " + boolean + "</br>");
+
+            document.write("DataType of a : " + typeof(c) + "</br>");
+
+            //escape code - we use \"  backslash to put duble quote
+            document.write("I love Football. I enjoy playing \"Basketball\" too.");
+
+
+            </script>
+        </p>
+    </div>
+
+    <h2>IF and Eles Functions</h2>
+    <div>
+    	<script type="text/javascript">
+    		var a = 10;
+
+    		if(a < 100){
+    			document.write("Please add more");
+    		}else{
+    			alert("Value is more than 100");
+    		}
+
+    		var b = 10;
+    		var c = "asd";
+
+    		document.write("</br>");
+
+    		if( b == c){
+    			document.write("a and b are same");
+    			document.write("</br>");
+    		}else{
+    			document.write("a and b are not same");
+    			document.write("</br>");
+
+    		}
+
+
+
+
+    	</script>
+    </div>
+
+    <h2>Loops! </h2>
+    <div>
+    	<h3></h3>
+    	<ul>
+    		<li>While Loop</li>
+    		<li>Do While</li>
+    		<li>For Loop</li>
+    	</ul>
+    	<script type="text/javascript">
+    			document.write("While Loop! </br>");
+    			var a = 10;
+    			while ( a <= 20){
+    				document.write(" ---> " + a + "</br>");
+    				a++;
+    			}
+    			document.write("For Loop! </br>");
+    			for(i = 0;i<a;i++){
+    				document.write(" ---> " + i + "</br>");
+    			}
+    			document.write("Do While Loop! </br>");
+
+    			a = 20;
+    			do{
+    				document.write(" ---> " + i + "</br>");
+    				i++;
+    			}while(i<=20);
+
+    	</script>
+
+    	<h3>Functions</h3>
+    	<div>
+    		
+    		<script type="text/javascript">
+    		//Fucntion are created by using key function 
+    		// and function name must have a parantheses
+
+    			function alertMessage(){
+    				alert("Welcome to myWorld :) ");
+    			}
+
+    			// alertMessage(); <-- must call to run the function we created above.
+    			
+    		</script>
+    	</div>
+    </div>
+</body>
+
+</html>

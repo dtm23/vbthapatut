@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<p id="thapa">Thapa</p>
+	<p class="welcome">Devendra</p>
+	<p class="welcome">Devendra Thapa</p>
+	<p class="welcome">Devendra Thapa Magar</p>
+
+
+	<ul><li>like</li>
+		<li>Share</li>
+		<li>Subscribe</li>
+	</ul>
+
+	<!-- access children of the body -->
+	<script type="text/javascript">
+		// add all elements( child) to the body.
+		//
+		var child = document.body.children;
+		//child hold all the elements of the body
+
+		console.log(child); //display on console.
+
+		//now let's create new child in the body
+		 var newTagChild = document.createElement("p");
+
+		 //Now, let's create a Node to add in the conten of newTagChild
+		 var textNode = document.createTextNode("This is NEW COMMENT");
+
+		 //WE NOW NEED TO APPEND( ADD ) child (textNode) to the Parent(newTagChild).
+		 newTagChild.appendChild(textNode);
+
+		 //now let's add new tag to the body
+		 document.body.appendChild(newTagChild);
+		
+		console.log(child); //display on console.
+
+
+		 //and console will display new child to the body
+
+
+		 //Access first and last child
+		 var listFirst= document.querySelector("ul");
+		 console.log(listFirst); //display child
+
+		 //display first child
+		 console.log(listFirst.firstChild);
+		 console.log(listFirst.lastChild);
+	
+	</script>
+
+</body>
+</html>
