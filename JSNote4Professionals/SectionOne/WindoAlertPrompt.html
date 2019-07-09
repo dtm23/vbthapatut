@@ -1,0 +1,40 @@
+<script type="text/javascript">
+	//The alert display a visual alret box on the scree.
+	//the alert method parameter is displayed to the user in plain text:
+
+	// window.alert("Hello!");
+
+	// becuasee window is a global object, you can call also use the following shortland: 
+	alert("Hello! "); // create pop-up on browser to notify message.
+
+
+	// Using window.prompt() 
+	// an easy way to get an input from a user is by using the prompt() method
+
+	// Syntax  prompt(text, [default]);
+	// text - dispaly the text in the prompt box
+	// default - a default value for the input field (optional)
+
+
+	var propmptValue  = prompt("How old are you?");
+	var name;
+
+	if(propmptValue >= 18){
+		name = prompt("what is your name?");
+		if(name != ""){
+			document.write("Welcome, " + name +"!");
+			
+		}else{
+			document.write("Welcome!");
+
+		}
+	}else{
+
+		document.write("You have to be over 18 to visit this page!");
+
+	}
+
+	result = window.confirm(message);
+
+
+</script>

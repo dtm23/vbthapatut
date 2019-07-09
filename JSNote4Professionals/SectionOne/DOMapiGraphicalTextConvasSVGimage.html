@@ -1,0 +1,61 @@
+<!-- Using the DOM API ( with graphical text : convas, svg or image files) -->
+
+
+<script type="text/javascript">
+	// Using canvas element 
+	// HTML Provide the canvas element for building raster-based iamges.
+
+
+	var canvas = document.createElement('canvas');
+	// first build a convas for holding image pixel information
+
+	canvas.width = 500;
+	canvas.height = 250;
+
+	// then select a context for the canvas, in this case two dimensonal:
+
+	var ctx = canvas.getContext('2d');
+	//Then set the properties related tot he text
+
+	ctx.font = "30px Cursive";
+	ctx.fillText = ("Hello Dvndra!", 50,50);
+
+	//then insert the canvas element to the page to take effect:
+	
+	document.body.appendChild(canvas);// add the new created element to the body.
+
+
+	// SVG is for building scalable vector-based graphic and can be used within HTML.
+
+	//FRIST CREATE SVG
+	var svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+	svg.width = 700;
+	svg.height = 50;
+
+	//then build a text element with the desired positioning and font characteristics: 
+
+	var text = document.createElementNS('http://www.w3.org/2000/svg','text');
+	text.setAttribute('x','0');
+	text.setAttribute('y','50');
+	text.style.fontFamily = "Times New Roman";
+	text.style.fontSize = '30';
+
+	text.textContent = "Hello! Devendra";
+
+// finally, add the text element to our svg container and add the svg contaner to the html document:
+
+	svg.appendChild(text);
+	document.body.appendChild(svg);
+
+// ##Image file
+
+// if you already have an image file containing the desired text and have it placed on a saver, you can add the url of the image and tehn add teh image tot eh document as follow
+
+	var img = new Image(); // image object
+	img.src="https://usercontent2.hubstatic.com/7956985.jpg";
+
+	document.body.appendChild(img);
+
+
+
+</script>
