@@ -1,0 +1,77 @@
+<!--
+The full list of format specifiers in JavaScript is:
+Specifier 			Output
+	%s 				Formats the value as a string
+	%i or %d 		Formats the value as an integer
+	%f 				Formats the value as a floating point value
+	%o 				Formats the value as an expandable DOM element
+	%O 				Formats the value as an expandable JavaScript object
+	%c 				Applies CSS style rules to the output string as specified 				  by the second parameter
+-->
+<script type="text/javascript">
+	// Display: Dvndra has 100 points.
+	console.log('%s has %d points', 'Dvndra', 100);
+	
+	console.log("%cHello world!", "color:blue; font-size:xx-large");
+	var obj = {
+		test:1
+	}
+	console.log(obj);
+	console.log(['string'], 1, obj, window);
+	//passing array and objects on console
+	console.log([0,3,32,31, 'string']); //passing arrays on log
+	console.log({
+		key1: 'value1',
+		key2: 'value2'
+	});
+	/*
+	Above 2 console.log will display:
+	Array [0, 3, 32, 'a string']
+	Object { key1: 'value', key2: 'another value'}
+	*/
+	// Nested objects may be collapsed:
+	console.log({ key1: 'val', key2: ['one', 'two'], key3: { a: 1, b: 2 } });
+	// Displays: Object { key1: 'val', key2: Array[2], key3: Object }
+
+
+	//display date & time on console
+	console.log(new Date());
+
+
+// try below code on the console on browser
+
+	function sec(){
+		first();
+	}
+
+	function first(){
+		console.trace();
+	}
+
+	sec();
+
+// output: 
+
+	console.table(['Hello', 'World']);
+	console.table({
+		name: 'Devendra',
+		wife: 'Kamala'
+	});
+
+	//Note: You can clear all previously printed message in the console and may print a message like 'console was cleared'.
+	//console.clear();
+
+	console.dirxml(document);
+
+
+	// Debuggin with assertions- console.assert()
+
+	//write an error message to the console if the assertion is false. Otherwise, if the assertion is true, this does nothing.
+
+	
+
+
+
+
+
+</script>

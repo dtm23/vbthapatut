@@ -1,0 +1,189 @@
+<!-- Chapter7-String -->
+
+<!-- 
+	String in javaScript can be enclosed in Single quotes 'Hello'
+	or double quote "Hello" 
+
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>
+ 	 
+ 	</title>
+ </head>
+ <body>
+ 	
+ 	<script type="text/javascript">
+
+	var hello  = "Hello";
+	var world = 'World';
+	var helloWorld = "Hello World";
+
+	//String can be created using other types using the String() function.
+
+	var intString = String(32);// '32'
+	var boolString = String('false'); //'false'
+	var nullString = String(null) ; // 'null'
+
+	// or, toString() can be used to convert Numbers, boolean or objects to strings.
+
+	var iString = (232).toString(); // '232'
+	var jString = (false).toString(); //'false'
+
+	var objString = ({}).toString(); //[object object]
+
+	// exampel of object 1
+	name1 = {
+		naam : "Devendra",
+		lnaam : "Magar",
+	};
+
+	console.log(name1.lnaam);
+	// example of object2
+
+
+	dtm = {
+		firstName: "Devendra",
+		middleName: "Thapa",
+		lastName: "Magar",
+	}
+
+	console.log(dtm.firstName);
+
+	//concatenating String
+	console.log(hello + " " + world + "!. ");
+	// or
+	document.write("<br>");
+	document.write(hello.concat(world) + " ! ");
+	
+
+	// With template literals, you can do string interpolation using ${variable} inside template literals:
+	var name = `Devendra`;
+	var greet = `Hello ${name}!`
+	console.log(greet); // "Hello World!"
+
+
+</script>
+<!-- Reverse String -->
+<script type="text/javascript">
+ 	 	document.write("<br>");
+ 	 	document.write("Reverse STRING");
+ 	 	document.write("<br>");
+ 	 	document.write("Reverse of Nepal : " + reverseString("Nepal"));
+ 	 	function reverseString(string){
+ 	 		var revStr = "" ; //
+ 	 		for(var i = string.length -1; i>=0;i--){
+ 	 			revStr += string[i];
+ 	 		}
+ 	 		return revStr;
+ 	 	}
+
+ 	 	document.write("<br>");
+ 	 	document.write("splitting a string into an array");
+
+ 	 	//use .split to go from string to an array of the split substring:
+
+ 	 	var s = "one, two, three, four, five";
+ 	 	//using .split method
+ 	 	s.split(", ");
+
+ 	 	 document.write("<br>" + s + ". Type of s is: " + typeof s);
+
+ 	 	// Use the array method .join to go back to a string:
+		s.split(", ").join("--"); // "one--two--three--four--five"
+
+		// charCodeAt() funtion example
+		var charCode = "ABCD".charCodeAt(2);
+		var charName = "DEVENDRA";
+		document.write("<br>" + "charcode at ABCD - C => " + charCode);
+
+	
+
+
+
+ 	 /*
+
+		Section 7.4: Access character at index in string
+
+		Use charAt() to get a character at the specified index in the string.
+		var string = "Hello, World!";
+		console.log( string.charAt(4) ); // "o"
+		Alternatively, because strings can be treated like arrays, use the index via bracket notation.
+		var string = "Hello, World!";
+		console.log( string[4] ); // "o"
+		To get the character code of the character at a specified index, use charCodeAt().
+		var string = "Hello, World!";
+		console.log( string.charCodeAt(4) ); // 111
+		Note that these methods are all getter methods (return a value). Strings in JavaScript are immutable. In other
+		words, none of them can be used to set a character at a position in the string.
+
+		Section 7.5: Escaping quotes
+
+		If your string is enclosed (i.e.) in single quotes you need to escape the inner literal quote with backslash \
+		var text = 'L\'albero means tree in Italian';
+		console.log( text ); \\ "L'albero means tree in Italian"
+		Same goes for double quotes:
+		var text = "I feel \"high\"";
+		Special attention must be given to escaping quotes if you're storing HTML representations within a String, since
+		HTML strings make large use of quotations i.e. in attributes:
+		var content = "<p class=\"special\">Hello World!</p>"; // valid String
+		var hello = '<p class="special">I\'d like to say "Hi"</p>'; // valid String
+		Quotes in HTML strings can also be represented using &apos; (or &#39;) as a single quote and &quot; ( or &#34;) as
+		double quotes.
+		var hi = "<p class='special'>I'd like to say &quot;Hi&quot;</p>"; // valid String
+		var hello = '<p class="special">I&apos;d like to say "Hi"</p>'; // valid String
+		Note: The use of &apos; and &quot; will not overwrite double quotes that browsers can automatically place on
+		attribute quotes. For example <p class=special> being made to <p class="special">, using &quot; can lead to
+		<p class=""special""> where \" will be <p class="special">.
+		Version ≥ 6
+		If a string has ' and " you may want to consider using template literals (also known as template strings in previous ES6
+		editions), which do not require you to escape ' and ". These use backticks (`) instead of single or double quotes.
+		GoalKicker.com – JavaScript® Notes for Professionals 41
+		var x = `"Escaping " and ' can become very annoying`;
+
+		Section 7.6: Word Counter
+
+		Say you have a <textarea> and you want to retrieve info about the number of:
+		Characters (total)
+		Characters (no spaces)
+		Words
+		Lines
+		function wordCount( val ){
+		 var wom = val.match(/\S+/g);
+		 return {
+		 charactersNoSpaces : val.replace(/\s+/g, '').length,
+		 characters : val.length,
+		 words : wom ? wom.length : 0,
+		 lines : val.split(/\r*\n/).length
+		 };
+		}
+		// Use like:
+		wordCount( someMultilineText ).words; // (Number of words)
+		jsFiddle example
+
+		Section 7.7: Trim whitespace
+
+		To trim whitespace from the edges of a string, use String.prototype.trim:
+		" some whitespaced string ".trim(); // "some whitespaced string"
+		Many JavaScript engines, but not Internet Explorer, have implemented non-standard trimLeft and trimRight
+		methods. There is a proposal, currently at Stage 1 of the process, for standardised trimStart and trimEnd
+		methods, aliased to trimLeft and trimRight for compatibility.
+		// Stage 1 proposal
+		" this is me ".trimStart(); // "this is me "
+		" this is me ".trimEnd(); // " this is me"
+		// Non-standard methods, but currently implemented by most engines
+		" this is me ".trimLeft(); // "this is me "
+		" this is me ".trimRight(); // " this is me"
+
+
+ 	 */
+
+
+</script>	
+
+
+ 
+ </body>
+ </html>
+
